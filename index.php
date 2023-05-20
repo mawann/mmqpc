@@ -5,7 +5,7 @@
 
 define('CLI_SCRIPT', true);
 
-require(__DIR__ . '/config.php');
+require('../config.php');
 
 $url = "https://www.mawan.net/moodle/get/token/";
 $wwwroot = $CFG->wwwroot;
