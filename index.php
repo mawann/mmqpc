@@ -40,19 +40,21 @@ if(curl_errno($ch)){
 // Tutup CURL
 curl_close($ch);
 
-// Tanggapan dari Mawan.NET dicoba diubah kembali dari string JSON menjadi objek.
+// Tanggapan dari Mawan.net dicoba diubah kembali dari string JSON menjadi objek.
 $data = json_decode($response);
 
-// Tanggapan dari Mawan.NET harus berupa string JSON, yang bisa diubah menjadi objek.
+// Tanggapan dari Mawan.net harus berupa string JSON, yang bisa diubah menjadi objek.
 // Bila tidak bisa diubah, mungkin string biasa (tulisan error).
 if ($data === null && json_last_error() !== JSON_ERROR_NONE) {
   echo "Error: String bukan hasil dari json_encode." . PHP_EOL;
-  echo "Tanggapan dari Mawan.NET adalah:" . PHP_EOL;
+  echo "Tanggapan dari Mawan.net adalah:" . PHP_EOL;
+  // Sebenarnya tidak perlu memakai htmlentities, karena script ini dijalankan dari CLI.
+  // Tapi untuk sekedar kehati-hatian (mitigasi), maka dipakai fungsi ini.
   echo htmlentities($response) . PHP_EOL;
   die();
 };
 
-// Tanggapan dari Mawan.NET harus ada data bernama token.
+// Tanggapan dari Mawan.net harus ada data bernama token.
 if (!isset($data->token)) {
   echo "Error: Tidak ditemukan data token." . PHP_EOL;
   die();
