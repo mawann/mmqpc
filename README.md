@@ -32,7 +32,10 @@ Untuk membuat Quiz:
 * Isikan password dengan ketentuan: **Harus angka semua, sebanyak 6 angka.**
 * Klik "Save and Display".
 
-Script ini berjalan pada mode evaluasi. Untuk mengetik serial number, buka file konfigurasi Moodle yang bernama `config.php`, kemudian tambahkan kode ini:
+Script ini berjalan pada mode evaluasi.  
+Pada mode evaluasi, salt adalah `garam-dapur` dan interval adalah 5 detik.  
+Untuk mengubah settingan ini, anda harus melakukan registrasi dan akan diberi serial number.  
+Untuk mengetik serial number, buka file konfigurasi Moodle yang bernama `config.php`, kemudian tambahkan kode ini:
 
 `$CFG->mmqpc = 'serial number';`
 
