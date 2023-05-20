@@ -33,11 +33,11 @@ Anda boleh menggunakan MOQCA sepuasnya, selamanya. Tapi ada batasannya yaitu:
 
 Untuk dapat mengubah dua parameter di atas, anda harus melakukan registrasi.
 
-## A. Petunjuk instalasi aplikasi Android di ponsel setiap pengawas ujian:
+## Petunjuk instalasi aplikasi Android di ponsel setiap pengawas ujian:
 
 Buka Google Play. Cari aplikasi yang bernama MMQPC. Lakukan pemasangan sampai selesai.
 
-## B. Petunjuk instalasi di server Moodle:
+## Petunjuk instalasi di server Moodle:
 
 * Masuk ke www-root dari Moodle: `cd /path/ke/moodle`
 * `git clone https://github.com/mawann/mmqpc`
@@ -57,7 +57,7 @@ Anda juga bisa memasang script secara manual (tidak disarankan) yaitu:
 Jalankan script PHP ini setiap menit, misalkan:  
 `* * * * * php /path/ke/moodle/mmqpc/ >/dev/null 2>&1`
 
-## C. Untuk membuat Quiz di Moodle:
+## Untuk membuat Quiz di Moodle:
 
 * Login ke Moodle.
 * Buat Quiz.
