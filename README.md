@@ -17,10 +17,18 @@ Petunjuk instalasi:
 * `cd mmqpc`
 * `git pull`
 
-Untuk meng-update kode, lakukan:
+Untuk meng-update script ini ke versi terbaru, lakukan:
+
 * `cd /path/ke/moodle`
 * `cd mmqpc`
 * `git pull`
+
+Untuk membuat Quiz:
+
+* Login ke Moodle.
+* Buat Quiz.
+* Pada Quiz Setting, cari settingan berjudul "Extra restrictions on attempts".
+* Isikan password dengan ketentuan: **Harus angka semua, sebanyak 6 angka.**
 
 Script ini berjalan pada mode evaluasi. Untuk mengetik serial number, buka file konfigurasi Moodle yang bernama `config.php`, kemudian tambahkan kode ini:
 
