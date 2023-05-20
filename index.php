@@ -1,6 +1,7 @@
 <?php
 // Jangan ubah apa pun yang ada di file ini.
-// Untuk mengetik serial number, ketik di file config.php.
+// Untuk mengetik serial number MMQPC, ketik di file config.php.
+// $CFG->mmqpc = 'serial number';
 
 define('CLI_SCRIPT', true);
 
@@ -8,7 +9,8 @@ require('/config.php');
 
 $url = "https://www.mawan.net/moodle/get/token/";
 $wwwroot = $CFG->wwwroot;
-$password = password_hash($wwwroot . '/' . ((isset($CFG->mmqpc) ? $CFG->mmqpc : 'tes'), PASSWORD_DEFAULT);
+$mmqpc = isset($CFG->mmqpc) ? $CFG->mmqpc : 'tes';
+$password = password_hash($wwwroot . '/' . $mmqpc, PASSWORD_DEFAULT);
 
 // Data yang ingin dikirim
 $postData = array(
