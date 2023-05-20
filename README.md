@@ -14,8 +14,6 @@ Petunjuk instalasi:
 
 * `cd /path/ke/moodle`
 * `git clone https://github.com/mawann/mmqpc`
-* `cd mmqpc`
-* `git pull`
 
 Untuk meng-update script ini ke versi terbaru, lakukan:
 
