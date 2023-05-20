@@ -33,7 +33,13 @@ Untuk meng-update script ini ke versi terbaru, lakukan:
 * `cd mmqpc`
 * `git pull`
 
-Untuk membuat Quiz:
+Anda juga bisa memasang script secara manual yaitu:
+
+* Dengan memakai File Manager atau File Explorer, buka root folder milik Moodle.
+* Buat folder bernama mmqpc
+* Salin kode index.php pada Github, kemudian disimpan di folder mmqpc.
+
+Untuk membuat Quiz di Moodle:
 
 * Login ke Moodle.
 * Buat Quiz.
