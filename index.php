@@ -68,6 +68,6 @@ if (!ctype_digit($data->token) || (strlen($data->token) != 6)) {
 $sql = 'update {quiz} set password=? where (length(password)=6) and (unix_timestamp() between timeopen and timeclose)';
 
 // Agar semakin yakin bahwa input hanya berupa angka sepanjang 6 digit, maka digunakan sprintf.
-$DB->execute($sql, [sprintf('%06d', (int) $data->token]));
+$DB->execute($sql, [ sprintf('%06d', (int) $data->token) ]);
 
 echo "Password Quiz sukses diubah." . PHP_EOL;
