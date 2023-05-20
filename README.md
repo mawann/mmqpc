@@ -57,6 +57,9 @@ Anda juga bisa memasang script secara manual (tidak disarankan) yaitu:
 Jalankan script PHP ini setiap menit, misalkan:  
 `* * * * * php /path/ke/moodle/mmqpc/ >/dev/null 2>&1`
 
+Atau tiap 5 menit:  
+`*/5 * * * * php /path/ke/moodle/mmqpc/ >/dev/null 2>&1`
+
 ## Untuk membuat Quiz di Moodle:
 
 * Login ke Moodle.
