@@ -1,4 +1,4 @@
-# mmqpc
+# MOQCA / MMQPC
 Mawan's Moodle Quiz Password Changer  
 
 Dengan MOQCA (juga dikenal dengan MMQPC atau Mawan's Moodle Quiz Password Changer), maka password pada quiz dapat diubah secara berkala, secara otomatis. Ini berguna untuk mencegah peserta ujian keluar masuk quiz (misalkan untuk mencontek di peramban web).
