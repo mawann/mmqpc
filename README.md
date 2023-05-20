@@ -1,22 +1,31 @@
 # mmqpc
 Mawan's Moodle Quiz Password Changer  
 
-Dasar pemikiran:  
-Quiz pada Moodle bisa dipasangi password, tapi password itu tidak bisa berubah otomatis. Saya ingin agar password diubah misalkan tiap 5 menit. Perubahan password itu bisa diketahui oleh pengawas ujian dari ponselnya yang telah dipasangi aplikasi MMQPC. Aplikasi ini dapat diunduh di Google Play.
+Dengan MOQCA (juga dikenal dengan MMQPC atau Mawan's Moodle Quiz Password Changer), maka password pada quiz dapat diubah secara berkala, secara otomatis. Ini berguna untuk mencegah peserta ujian keluar masuk quiz (misalkan untuk mencontek di peramban web).
 
-`https://play.google.com/store/apps/details?id=appinventor.ai_mawan911.MMQPC`
+MOQCA terdiri:
+1. Aplikasi Android yang dipasang di ponsel setiap pengawas ujian.
+2. Script PHP yang dipasang di server Moodle.
 
-Aplikasi Android ini bahkan tetap bisa berfungsi sekali pun tidak mendapat sinyal, karena aplikasi MMQPC tidak membutuhkan koneksi internet.
+Aplikasi Andoid dapat diunduh di Google Play Store:
+https://play.google.com/store/apps/details?id=appinventor.ai_mawan911.MMQPC
 
-Sedangkan script PHP ini harus dipasang di server Moodle. Script ini hanya mengubah password Quiz yang telah dipasangi password sepanjang 6 karakter. Jadi misalkan ada Quiz dengan password 'rahasia' maka password tersebut tidak akan diubah sebab panjang passwordnya adalah 7 karakter. Quiz yang tidak dipasangi password pun tidak akan diubah passwordnya.
+Script PHP dapat diunduh atau di-clone dari:
+https://github.com/mawann/mmqpc/
 
-Petunjuk instalasi:  
+Anda boleh menggunakan MOQCA sepuasnya, selamanya. Tapi ada batasannya yaitu:
+1. Salt tidak bisa diubah, yaitu garam-dapur.
+2. Durasi penggantian tidak bisa diubah, yaitu 5 menit.
+
+Untuk dapat mengubah dua parameter di atas, anda harus melakukan registrasi.
+
+A. Petunjuk instalasi aplikasi Android di ponsel setiap pengawas ujian:  
+Buka Google Play. Cari aplikasi yang bernama MMQPC. Lakukan pemasangan sampai selesai.
+
+B. Petunjuk instalasi di server Moodle:
 
 * `cd /path/ke/moodle`
 * `git clone https://github.com/mawann/mmqpc`
-* Edit file config.php: `nano config.php`
-* Tambahkan kode: `$CFG->mmqpc = "serial number"` atau boleh juga dikosongkan.
-* Hubungi Mawan dengan isi pesan adalah URL dari Moodle anda (lihat string di `CFG->wwwroot`). Tanpa melaporkan URL Moodle, script ini tidak akan bisa berfungsi.
 
 Untuk meng-update script ini ke versi terbaru, lakukan:
 
@@ -34,12 +43,7 @@ Untuk membuat Quiz:
 
 Script ini berjalan pada mode evaluasi.  
 Pada mode evaluasi, salt adalah `garam-dapur` dan interval adalah 5 menit.  
-Untuk mengubah settingan ini, anda harus melakukan registrasi dan akan diberi serial number.  
-Untuk mengetik serial number, buka file konfigurasi Moodle yang bernama `config.php`, kemudian tambahkan kode ini:
-
-`$CFG->mmqpc = 'serial number';`
-
-Serial number bisa diminta ke Mawan.
+Untuk mengubah settingan ini, anda harus melakukan registrasi dan akan diberi serial number.
 
 Jalankan script ini setiap menit, misalkan:  
 `* * * * * php /path/ke/moodle/mmqpc/ >/dev/null 2>&1`
