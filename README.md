@@ -14,6 +14,9 @@ Petunjuk instalasi:
 
 * `cd /path/ke/moodle`
 * `git clone https://github.com/mawann/mmqpc`
+* Edit file config.php: `nano config.php`
+* Tambahkan kode: `$CFG->mmqpc = "serial number"` atau boleh juga dikosongkan.
+* Hubungi Mawan dengan isi pesan adalah URL dari Moodle anda (lihat string di `CFG->wwwroot`). Tanpa melaporkan URL Moodle, script ini tidak akan bisa berfungsi.
 
 Untuk meng-update script ini ke versi terbaru, lakukan:
 
