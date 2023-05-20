@@ -33,7 +33,7 @@ Untuk membuat Quiz:
 * Klik "Save and Display".
 
 Script ini berjalan pada mode evaluasi.  
-Pada mode evaluasi, salt adalah `garam-dapur` dan interval adalah 5 detik.  
+Pada mode evaluasi, salt adalah `garam-dapur` dan interval adalah 5 menit.  
 Untuk mengubah settingan ini, anda harus melakukan registrasi dan akan diberi serial number.  
 Untuk mengetik serial number, buka file konfigurasi Moodle yang bernama `config.php`, kemudian tambahkan kode ini:
 
