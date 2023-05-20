@@ -14,8 +14,8 @@ $password = password_hash($wwwroot . '/' . $mmqpc, PASSWORD_DEFAULT);
 
 // Data yang ingin dikirim
 $postData = array(
-    'wwwroot' => $wwwroot,
-    'password' => $password
+  'wwwroot' => $wwwroot,
+  'password' => $password
 );
 
 // Inisialisasi CURL
@@ -31,12 +31,27 @@ $response = curl_exec($ch);
 
 // Cek jika ada kesalahan
 if(curl_errno($ch)){
-    echo 'Error: ' . curl_error($ch);
-}
+  echo 'Error: ' . curl_error($ch);
+  die();
+};
 
 // Tutup CURL
 curl_close($ch);
 
-echo "Respon Mawan.net adalah:" . PHP_EOL;
-echo $response;
-echo PHP_EOL;
+$data = json_decode($response);
+if ($data === null && json_last_error() !== JSON_ERROR_NONE) {
+  echo "Error: String bukan hasil dari json_encode." , PHP_EOL;
+  die();
+};
+
+if (!isset($data->token)) {
+  echo "Error: Tidak ditemukan data token." . PHP_EOL;
+  die();
+};
+
+if (!ctype_digit($data->token) || (strlen($data->token) != 6)) {
+  echo "Error: Token tidak valid. Harus angka sepanjang 6 digit.";
+};
+
+$sql = 'update {quiz} set password=? where (length(password)=6) and (unix_timestamp() between timeopen and timeclose)';
+$DB->execute($sql, [$data->token]);
