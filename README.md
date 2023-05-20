@@ -6,7 +6,9 @@ Quiz pada Moodle bisa dipasangi password, tapi password itu tidak bisa berubah o
 
 `https://play.google.com/store/apps/details?id=appinventor.ai_mawan911.MMQPC`
 
-Aplikasi Android ini bahkan tetap bisa berfungsi sekali pun tidak mendapat sinyal, karena aplikasi MMQPC tidak membutuhkan koneksi internet. Sedangkan script ini harus dipasang di server Moodle. Script ini hanya mengubah password Quiz yang telah dipasangi password sepanjang 6 karakter. Jadi misalkan ada Quiz dengan password 'rahasia' maka password tersebut tidak akan diubah sebab panjang passwordnya adalah 7 karakter. Quiz yang tidak dipasangi password pun tidak akan diubah passwordnya.
+Aplikasi Android ini bahkan tetap bisa berfungsi sekali pun tidak mendapat sinyal, karena aplikasi MMQPC tidak membutuhkan koneksi internet.
+
+Sedangkan script PHP ini harus dipasang di server Moodle. Script ini hanya mengubah password Quiz yang telah dipasangi password sepanjang 6 karakter. Jadi misalkan ada Quiz dengan password 'rahasia' maka password tersebut tidak akan diubah sebab panjang passwordnya adalah 7 karakter. Quiz yang tidak dipasangi password pun tidak akan diubah passwordnya.
 
 Petunjuk instalasi:  
 
