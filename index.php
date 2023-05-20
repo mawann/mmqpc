@@ -8,6 +8,8 @@ define('CLI_SCRIPT', true);
 require('../config.php');
 
 $url = "https://www.mawan.net/moodle/get/token/";
+
+// Data yang akan dikirim ke Mawan.net
 $wwwroot = $CFG->wwwroot;
 $mmqpc = isset($CFG->mmqpc) ? $CFG->mmqpc : 'tes';
 $password = password_hash($wwwroot . '/' . $mmqpc, PASSWORD_DEFAULT);
@@ -38,20 +40,34 @@ if(curl_errno($ch)){
 // Tutup CURL
 curl_close($ch);
 
+// Tanggapan dari Mawan.NET dicoba diubah kembali dari string JSON menjadi objek.
 $data = json_decode($response);
+
+// Tanggapan dari Mawan.NET harus berupa string JSON, yang bisa diubah menjadi objek.
+// Bila tidak bisa diubah, mungkin string biasa (tulisan error).
 if ($data === null && json_last_error() !== JSON_ERROR_NONE) {
-  echo "Error: String bukan hasil dari json_encode." , PHP_EOL;
+  echo "Error: String bukan hasil dari json_encode." . PHP_EOL;
+  echo "Tanggapan dari Mawan.NET adalah:" . PHP_EOL;
+  echo htmlentities($response) . PHP_EOL;
   die();
 };
 
+// Tanggapan dari Mawan.NET harus ada data bernama token.
 if (!isset($data->token)) {
   echo "Error: Tidak ditemukan data token." . PHP_EOL;
   die();
 };
 
+// Token harus berupa 6 digit angka.
 if (!ctype_digit($data->token) || (strlen($data->token) != 6)) {
   echo "Error: Token tidak valid. Harus angka sepanjang 6 digit.";
+  die();
 };
 
+// Lakukan perubahan password Quiz hanya untuk Quiz yang sedang aktif berjalan.
 $sql = 'update {quiz} set password=? where (length(password)=6) and (unix_timestamp() between timeopen and timeclose)';
-$DB->execute($sql, [$data->token]);
+
+// Agar semakin yakin bahwa input hanya berupa angka sepanjang 6 digit, maka digunakan sprintf.
+$DB->execute($sql, [sprintf('%06d', (int) $data->token]));
+
+echo "Password Quiz sukses diubah." . PHP_EOL;
