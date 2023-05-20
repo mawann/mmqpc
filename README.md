@@ -29,6 +29,7 @@ Untuk membuat Quiz:
 * Buat Quiz.
 * Pada Quiz Setting, cari settingan berjudul "Extra restrictions on attempts".
 * Isikan password dengan ketentuan: **Harus angka semua, sebanyak 6 angka.**
+* Klik "Save and Display".
 
 Script ini berjalan pada mode evaluasi. Untuk mengetik serial number, buka file konfigurasi Moodle yang bernama `config.php`, kemudian tambahkan kode ini:
 
