@@ -71,5 +71,5 @@ Atau tiap 5 menit:
 ## Registrasi
 
 Script ini berjalan pada mode evaluasi.  
-Pada mode evaluasi, salt adalah `garam-dapur` dan interval adalah 5 menit.  
+Pada mode evaluasi, salt adalah `garam-dapur` dan interval adalah `5` menit.  
 Untuk mengubah settingan ini, anda harus melakukan registrasi dan akan diberi serial number.
