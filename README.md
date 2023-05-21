@@ -11,7 +11,7 @@ Ada! Yaitu gunakan Mawan's Moodle Quiz Password Changer. Silakan dibaca petunjuk
 **Intinya adalah:**
 
 1. Guru (pengawas ujian) memasang aplikasi Android di ponsélnya. Aplikasi ini untuk memunculkan password. Tidak perlu konéksi internét! Dengan demikian, aplikasi ini masih dapat berjalan lancar di lab komputer yang sulit mendapat sinyal.
-2. Admin Moogle memasang satu script PHP di Moodle. Script ini dapat diunduh secara manual (tidak disarankan) atau otomatis di-clone dengan perintah git clone (disarankan).
+2. Admin Moodle memasang satu script PHP di Moodle. Script ini dapat diunduh secara manual (tidak disarankan) atau otomatis di-clone dengan perintah git clone (disarankan).
 
 Dengan MOQCA (juga dikenal dengan MMQPC atau Mawan's Moodle Quiz Password Changer), maka password pada quiz dapat diubah secara berkala, secara otomatis. Ini berguna untuk mencegah peserta ujian keluar masuk quiz (misalkan untuk mencontek di peramban web).
 
