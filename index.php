@@ -78,12 +78,5 @@ if ($hasil == false) {
   echo "Error: Gagal melakukan query untuk mengubah password Quiz." . PHP_EOL;
 }
 else {
-  $affected = $DB->affected_rows();
-  if ($affected == 0) {
-    echo 'Tidak ada Quiz aktif yang perlu diubah passwordnya.' . PHP_EOL;
-  }
-  else {
-    echo "Sukses! Ada $hasil Quiz yang passwordnya telah diubah." . PHP_EOL;
-    echo "Password terbaru adalah {$data->token}." . PHP_EOL;
-  };
+  echo "Sukses melakukan update." . PHP_EOL;
 };
