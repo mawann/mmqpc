@@ -95,5 +95,6 @@ if ($hasil == false) {
   echo "Error: Gagal melakukan query untuk mengubah password Quiz." . PHP_EOL;
 }
 else {
-  echo "Sukses melakukan update." . PHP_EOL;
+  echo "Sukses melakukan update password Quiz." . PHP_EOL;
+  echo "Password terbaru adalah $data->token." . PHP_EOL;
 };
