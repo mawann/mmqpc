@@ -15,6 +15,8 @@ Ada! Yaitu gunakan Mawan's Moodle Quiz Password Changer.
 
 Dengan MOQCA (juga dikenal dengan MMQPC atau _Mawan's Moodle Quiz Password Changer_), maka password pada quiz dapat diubah secara berkala, secara otomatis. Ini berguna untuk mencegah peserta ujian keluar masuk quiz (misalkan untuk mencontek di peramban web).
 
+Bagi anda yang mengenal UNBK, pasti tidak asing lagi dengan istilah token. Nah, aplikasi ini mirip server yang menghasilkan token UNBK.
+
 ## Penjelasan
 
 MOQCA terdiri:
