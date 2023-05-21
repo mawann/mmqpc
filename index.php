@@ -79,4 +79,5 @@ if ($hasil == 0) {
 }
 else {
   echo "Sukses! Ada $hasil Quiz yang passwordnya telah diubah." . PHP_EOL;
+  echo "Password terbaru adalah $password." . PHP_EOL;
 };
