@@ -5,6 +5,7 @@
 
 define('CLI_SCRIPT', true);
 
+// Cegah aplikasi ini diakses dari web. Harus dari CLI.
 require('../config.php');
 
 $url = "https://www.mawan.net/moodle/get/token/";
