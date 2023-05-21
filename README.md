@@ -58,10 +58,10 @@ Anda juga bisa memasang script secara manual (tidak disarankan) yaitu:
 * Salin kode `index.php` pada Github, kemudian disimpan di folder mmqpc.
 
 Jalankan script PHP ini setiap menit, misalkan:  
-`* * * * * php /path/ke/moodle/mmqpc/ >/dev/null 2>&1`
+`* * * * * php /path/ke/moodle/mmqpc/index.php >/dev/null 2>&1`
 
 Atau tiap 5 menit:  
-`*/5 * * * * php /path/ke/moodle/mmqpc/ >/dev/null 2>&1`
+`*/5 * * * * php /path/ke/moodle/mmqpc/index.php >/dev/null 2>&1`
 
 ## Untuk membuat Quiz di Moodle:
 
