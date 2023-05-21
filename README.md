@@ -6,7 +6,7 @@ Murid zaman sekarang makin kréatif dalam mencari celah keamanan. Meréka bisa k
 > Untuk mencegah hal ini, guru dapat memasang password pada Quiz kemudian secara berkala (misalkan tiap 5 menit) password itu diubah. Murid yang keluar dari Quiz (untuk menconték) dan masuk kembali ke Quiz pasti kesulitan karena password telah diubah.
 
 Tapi tentu saja ini merépotkan guru karena password Quiz diubah secara manual. Adakah cara yang lebih mudah dan otomatis?
-Ada! Yaitu gunakan Mawan's Moodle Quiz Password Changer. Silakan dibaca petunjuknya di Github.
+Ada! Yaitu gunakan Mawan's Moodle Quiz Password Changer.
 
 **Intinya adalah:**
 
