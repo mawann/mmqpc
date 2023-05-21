@@ -23,7 +23,7 @@ if (!isset($CFG) || !isset($DB)) {
   echo 'Error: File config.php di www root sepertinya bukan berisi konfigurasi Moodle.' . PHP_EOL;
   die();
 };
-  
+
 // Server penghasil token, yaitu Mawan.net
 $url = "https://www.mawan.net/moodle/get/token/";
 
