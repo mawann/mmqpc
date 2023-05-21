@@ -6,14 +6,15 @@
 // Cegah aplikasi ini diakses dari web. Harus dari CLI.
 define('CLI_SCRIPT', true);
 
-// Anggap Moodle dipasang di www root, misalkan https://example.com
-// Akan gagal bila dipasang di sub directory, misalkan http://example.com/moodle
+// Folder script ini harus disimpan satu tingkat di bawah config.php.
+// Misalkan:  config.php ada di folder /home/mawan/example.com/public_html
+// maka script ini harus ada di folder /home/mawan/example.com/public_html/mmqpc
 $namaConfig = dirname(__DIR__) . '/config.php';
 if (file_exists($namaConfig)) {
   include($namaConfig);
 }
 else {
-  echo 'Error: File config.php tidak berhasil ditemukan di www root.' . PHP_EOL;
+  echo 'Error: File config.php tidak berhasil ditemukan di parent folder.' . PHP_EOL;
   die();
 };
 
