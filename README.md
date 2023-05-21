@@ -65,7 +65,7 @@ Atau tiap 5 menit:
 * Login ke Moodle.
 * Buat Quiz.
 * Pada Quiz Setting, cari settingan berjudul "Extra restrictions on attempts".
-* Isikan password dengan ketentuan: **Harus angka semua, sebanyak 6 angka.**
+* Isikan password dengan ketentuan: **Harus angka semua, sebanyak 6 angka.** Anda boleh mengetik `000000` atau `123456`. Nanti pada saatnya, angka ini akan diganti oleh script secara otomatis.
 * Klik "Save and Display".
 
 ## Registrasi
