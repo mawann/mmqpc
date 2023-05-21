@@ -74,10 +74,16 @@ $sql = 'update {quiz} set password=? where (length(password)=6) and (unix_timest
 // Agar semakin yakin bahwa input hanya berupa angka sepanjang 6 digit, maka digunakan sprintf.
 $hasil = $DB->execute($sql, [ sprintf('%06d', (int) $data->token) ]);
 
-if ($hasil == 0) {
-  echo "Tidak ada Quiz yang passwordnya diubah." . PHP_EOL;
+if ($hasil == false) {
+  echo "Error: Gagal melakukan query untuk mengubah password Quiz." . PHP_EOL;
 }
 else {
-  echo "Sukses! Ada $hasil Quiz yang passwordnya telah diubah." . PHP_EOL;
-  echo "Password terbaru adalah {$data->token}." . PHP_EOL;
+  $affected = $DB->affected_rows();
+  if ($affected == 0) {
+    echo 'Tidak ada Quiz aktif yang perlu diubah passwordnya.' . PHP_EOL;
+  }
+  else {
+    echo "Sukses! Ada $hasil Quiz yang passwordnya telah diubah." . PHP_EOL;
+    echo "Password terbaru adalah {$data->token}." . PHP_EOL;
+  };
 };
