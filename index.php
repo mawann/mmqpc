@@ -8,8 +8,15 @@ define('CLI_SCRIPT', true);
 
 // Anggap Moodle dipasang di www root, misalkan https://example.com
 // Akan gagal bila dipasang di sub directory, misalkan http://example.com/moodle
-include( $_SERVER['DOCUMENT_ROOT'] . '/config.php' );
-
+$namaConfig = $_SERVER['DOCUMENT_ROOT'] . '/config.php';
+if (file_exists($namaConfig)) {
+  include($namaConfig);
+}
+else {
+  echo 'Error. The file config.php could not be found.' . PHP_EOL;
+  die();
+};
+  
 // Server penghasil token, yaitu Mawan.net
 $url = "https://www.mawan.net/moodle/get/token/";
 
