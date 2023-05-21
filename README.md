@@ -51,6 +51,9 @@ Untuk meng-update script ini ke versi terbaru, lakukan:
 * `cd mmqpc`
 * `git pull`
 
+Catatan:  
+Ganti `/path/ke/moodle` dengan path sebenarnya, misalkan `/home/mawan/example.com/public_html` atau `/var/www/html`
+
 Anda juga bisa memasang script secara manual (tidak disarankan) yaitu:
 
 * Dengan memakai _File Manager_ atau _File Explorer_, buka folder www-root milik Moodle. Untuk patokan, pada www-root ada file config.php milik Moodle.
