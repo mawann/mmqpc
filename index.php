@@ -11,7 +11,7 @@ define('CLI_SCRIPT', true);
 // maka script ini harus ada di folder /home/mawan/example.com/public_html/mmqpc
 $namaConfig = dirname(__DIR__) . '/config.php';
 if (file_exists($namaConfig)) {
-  include($namaConfig);
+  require($namaConfig);
 }
 else {
   echo 'Error: File config.php tidak berhasil ditemukan di parent folder.' . PHP_EOL;
