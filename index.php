@@ -1,13 +1,16 @@
 <?php
 // Jangan ubah apa pun yang ada di file ini.
 // Untuk mengetik serial number MMQPC, ketik di file config.php.
-// $CFG->mmqpc = 'serial number';
-
-define('CLI_SCRIPT', true);
+// Contoh: $CFG->mmqpc = 'serial number';
 
 // Cegah aplikasi ini diakses dari web. Harus dari CLI.
-require('../config.php');
+define('CLI_SCRIPT', true);
 
+// Anggap Moodle dipasang di www root, misalkan https://example.com
+// Akan gagal bila dipasang di sub directory, misalkan http://example.com/moodle
+include( $_SERVER['DOCUMENT_ROOT'] . '/config.php' );
+
+// Server penghasil token, yaitu Mawan.net
 $url = "https://www.mawan.net/moodle/get/token/";
 
 // Data yang akan dikirim ke Mawan.net
