@@ -13,7 +13,13 @@ if (file_exists($namaConfig)) {
   include($namaConfig);
 }
 else {
-  echo 'Error. The file config.php could not be found.' . PHP_EOL;
+  echo 'Error: File config.php tidak berhasil ditemukan di www root.' . PHP_EOL;
+  die();
+};
+
+// Harus ada variabel $CFG dan $DB. Bila tidak ada, berarti itu bukan filenya Moodle.
+if (!isset($CFG) || !isset($DB)) {
+  echo 'Error: File config.php di www root sepertinya bukan berisi konfigurasi Moodle.' . PHP_EOL;
   die();
 };
   
