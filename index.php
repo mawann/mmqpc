@@ -68,6 +68,7 @@ if (!ctype_digit($data->token) || (strlen($data->token) != 6)) {
 };
 
 // Lakukan perubahan password Quiz hanya untuk Quiz yang sedang aktif berjalan.
+// Query ini berjalan baik pada MySQL dan MariaDB.
 $sql = 'update {quiz} set password=? where (length(password)=6) and (unix_timestamp() between timeopen and timeclose)';
 
 // Agar semakin yakin bahwa input hanya berupa angka sepanjang 6 digit, maka digunakan sprintf.
