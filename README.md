@@ -31,7 +31,8 @@ Anda boleh menggunakan MOQCA sepuasnya, selamanya. Tapi ada batasannya yaitu:
 1. `Salt` tidak bisa diubah, yaitu garam-dapur.
 2. `Duration` penggantian tidak bisa diubah, yaitu password berubah tiap 5 menit.
 
-Untuk dapat mengubah dua parameter di atas, anda harus melakukan registrasi.
+Untuk dapat mengubah dua parameter di atas, anda harus melakukan registrasi.  
+Dengan mengubah dua parameter itu, password yang dihasilkan pun berbeda.
 
 ## Petunjuk instalasi aplikasi Android di ponsel setiap pengawas ujian:
 
