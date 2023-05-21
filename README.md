@@ -1,7 +1,7 @@
 # MOQCA / MMQPC
-Mawan's Moodle Quiz Password Changer
+_Mawan's Moodle Quiz Password Changer_
 
-Murid zaman sekarang makin kréatif dalam mencari celah keamanan. Meréka bisa keluar dari Safe Exam Browser atau aplikasi sejenis Kiosk Mode untuk browsing mencari jawaban di internét, setelah itu masuk kembali ke Moodle dan melanjutkan Quiz.
+Murid zaman sekarang makin kréatif dalam mencari celah keamanan. Meréka bisa keluar dari _Safe Exam Browser_ atau aplikasi sejenis Kiosk Mode untuk browsing mencari jawaban di internét, setelah itu masuk kembali ke Moodle dan melanjutkan Quiz.
 
 > Untuk mencegah hal ini, guru dapat memasang password pada Quiz kemudian secara berkala (misalkan tiap 5 menit) password itu diubah. Murid yang keluar dari Quiz (untuk menconték) dan masuk kembali ke Quiz pasti kesulitan karena password telah diubah.
 
@@ -11,9 +11,9 @@ Ada! Yaitu gunakan Mawan's Moodle Quiz Password Changer.
 **Intinya adalah:**
 
 1. Guru (pengawas ujian) memasang aplikasi Android di ponsélnya. Aplikasi ini untuk memunculkan password. Tidak perlu konéksi internét! Dengan demikian, aplikasi ini masih dapat berjalan lancar di lab komputer yang sulit mendapat sinyal.
-2. Admin Moodle memasang satu script PHP di Moodle. Script ini dapat diunduh secara manual (tidak disarankan) atau otomatis di-clone dengan perintah git clone (disarankan).
+2. Admin Moodle memasang satu script PHP di Moodle. Script ini dapat diunduh secara manual (tidak disarankan) atau otomatis di-clone dengan perintah `git clone` (disarankan).
 
-Dengan MOQCA (juga dikenal dengan MMQPC atau Mawan's Moodle Quiz Password Changer), maka password pada quiz dapat diubah secara berkala, secara otomatis. Ini berguna untuk mencegah peserta ujian keluar masuk quiz (misalkan untuk mencontek di peramban web).
+Dengan MOQCA (juga dikenal dengan MMQPC atau _Mawan's Moodle Quiz Password Changer_), maka password pada quiz dapat diubah secara berkala, secara otomatis. Ini berguna untuk mencegah peserta ujian keluar masuk quiz (misalkan untuk mencontek di peramban web).
 
 ## Penjelasan
 
@@ -28,8 +28,8 @@ Script PHP dapat diunduh atau di-clone dari:
 https://github.com/mawann/mmqpc/
 
 Anda boleh menggunakan MOQCA sepuasnya, selamanya. Tapi ada batasannya yaitu:
-1. Salt tidak bisa diubah, yaitu garam-dapur.
-2. Durasi penggantian tidak bisa diubah, yaitu 5 menit.
+1. `Salt` tidak bisa diubah, yaitu garam-dapur.
+2. `Duration` penggantian tidak bisa diubah, yaitu password berubah tiap 5 menit.
 
 Untuk dapat mengubah dua parameter di atas, anda harus melakukan registrasi.
 
