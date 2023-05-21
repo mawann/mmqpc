@@ -1,4 +1,4 @@
-# MOQCA / MMQPC
+# MOQCA / MMQPC versi 2.0
 _Mawan's Moodle Quiz Password Changer_
 
 Murid zaman sekarang makin kréatif dalam mencari celah keamanan. Meréka bisa keluar dari _Safe Exam Browser_ atau aplikasi sejenis Kiosk Mode untuk browsing mencari jawaban di internét, setelah itu masuk kembali ke Moodle dan melanjutkan Quiz.
