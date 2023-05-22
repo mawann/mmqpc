@@ -1,7 +1,13 @@
 <?php
-// Jangan ubah apa pun yang ada di file ini.
-// Untuk mengetik serial number MMQPC, ketik di file config.php.
-// Contoh: $CFG->mmqpc = 'serial number';
+// +---------------------------------------------------------------+
+// | Mawan's Moodle Quiz Password Changer versi 2.0                |
+// | (C) Mawan Agus Nugroho, 2023.                                 |
+// | Source: https://github.com/mawann/mmqpc                       |
+// |                                                               |
+// | Jangan ubah apa pun yang ada di file ini.                     |
+// | Untuk mengetik serial number MMQPC, ketik di file config.php. |
+// | Contoh isi file config.php: $CFG->mmqpc = 'serial number';    |
+// +---------------------------------------------------------------+
 
 // Cegah aplikasi ini diakses dari web. Harus dari CLI.
 define('CLI_SCRIPT', true);
