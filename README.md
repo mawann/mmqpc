@@ -3,7 +3,7 @@ _Mawan's Moodle Quiz Password Changer_
 
 Murid zaman sekarang makin kréatif dalam mencari celah keamanan. Meréka bisa keluar dari _Safe Exam Browser_ atau aplikasi sejenis Kiosk Mode untuk browsing mencari jawaban di internét, setelah itu masuk kembali ke Moodle dan melanjutkan Quiz.
 
-> Untuk mencegah hal ini, guru dapat memasang password pada Quiz kemudian secara berkala (misalkan tiap 5 menit) password itu diubah. Murid yang keluar dari Quiz (untuk menconték) dan masuk kembali ke Quiz pasti kesulitan karena password telah diubah.
+> Untuk mencegah hal ini, guru dapat memasang password pada Quiz kemudian secara berkala (misalkan tiap 10 menit) password itu diubah. Murid yang keluar dari Quiz (untuk menconték) dan masuk kembali ke Quiz pasti kesulitan karena password telah diubah.
 
 Tapi tentu saja ini merépotkan guru karena password Quiz diubah secara manual. Adakah cara yang lebih mudah dan otomatis?
 Ada! Yaitu gunakan Mawan's Moodle Quiz Password Changer.
@@ -30,8 +30,8 @@ Script PHP dapat diunduh atau di-clone dari:
 https://github.com/mawann/mmqpc/
 
 Anda boleh menggunakan MOQCA sepuasnya, selamanya. Tapi ada batasannya yaitu:
-1. `Salt` tidak bisa diubah, yaitu garam-dapur.
-2. `Duration` penggantian tidak bisa diubah, yaitu password berubah tiap 5 menit.
+1. `Salt` tidak bisa diubah, yaitu `Mawan.NET`.
+2. `Duration` penggantian tidak bisa diubah, yaitu password berubah tiap `10` menit.
 
 Untuk dapat mengubah dua parameter di atas, anda harus melakukan registrasi.  
 Dengan mengubah dua parameter itu, password yang dihasilkan pun berbeda.
@@ -63,9 +63,6 @@ Anda juga bisa memasang script secara manual (tidak disarankan) yaitu:
 Jalankan script PHP ini setiap menit, misalkan:  
 `* * * * * php /path/ke/moodle/mmqpc/index.php >/dev/null 2>&1`
 
-Atau tiap 5 menit:  
-`*/5 * * * * php /path/ke/moodle/mmqpc/index.php >/dev/null 2>&1`
-
 ## Untuk membuat Quiz di Moodle:
 
 * Login ke Moodle.
@@ -77,5 +74,5 @@ Atau tiap 5 menit:
 ## Registrasi
 
 Script ini berjalan pada mode evaluasi.  
-Pada mode evaluasi, salt adalah `garam-dapur` dan interval adalah `5` menit.  
+Pada mode evaluasi, salt adalah `Mawan.NET` dan interval adalah `10` menit.  
 Untuk mengubah settingan ini, anda harus melakukan registrasi dan akan diberi serial number.
