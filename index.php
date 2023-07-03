@@ -91,8 +91,9 @@ if (!ctype_digit($data->token) || (strlen($data->token) != 6)) {
 };
 
 // Lakukan perubahan password Quiz hanya untuk Quiz yang sedang aktif berjalan.
-// Query ini berjalan baik pada MySQL dan MariaDB.
-$sql = 'update {quiz} set password=? where (length(password)=6) and (unix_timestamp() between timeopen and timeclose)';
+// Query ini berjalan baik pada PostgreSQL, MySQL dan MariaDB.
+$epoch = (isset($CFG->dbtype) && ($CFG->dbtype == 'pgsql')) ? 'extract(epoch from current_timestamp)' : 'unix_timestamp()';
+$sql = 'update {quiz} set password=? where (length(password)=6) and (' . $epoch . ' between timeopen and timeclose)';
 
 // Agar semakin yakin bahwa input hanya berupa angka sepanjang 6 digit, maka digunakan sprintf.
 $hasil = $DB->execute($sql, [ sprintf('%06d', (int) $data->token) ]);
